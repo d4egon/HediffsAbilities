@@ -32,6 +32,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+	<Reference Include="UnityEngine.CoreModule">
+		<HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		<Private>False</Private>
+	</Reference>
+	<Reference Include="UnityEngine.TextRenderingModule">
+		<HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+		<Private>False</Private>
+	</Reference>
+	<Reference Include="mscorlib" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="StatDefOfLocal.cs" />
     <Compile Include="HediffDefOfLocal.cs" />
@@ -73,6 +96,7 @@
     <Compile Include="AI\JobDrivers\JobDriver_SacrificeSelf.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -92,5 +116,7 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
   </ItemGroup>
+=======
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

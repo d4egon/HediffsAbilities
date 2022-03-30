@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
+=======
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HediffsAbilities", "HediffsAbilities.csproj", "{FFE49966-391E-4953-8CFE-2BB3435A099B}"
 EndProject
 Global
@@ -18,7 +24,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56B37FC3-387C-4808-B873-CD9B7904C852}
 	EndGlobalSection
+=======
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 EndGlobal

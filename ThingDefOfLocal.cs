@@ -9,6 +9,7 @@ using Verse;
 
 namespace HediffsAbilities
 {
+<<<<<<< HEAD
     [DefOf]
     public static class ThingDefOfLocal
     {
@@ -18,4 +19,15 @@ namespace HediffsAbilities
         //public static ThingDef DivineEater;
         public static ThingDef ThingDef_RaisedWood;
     }
+=======
+  [DefOf]
+  public static class ThingDefOfLocal
+  {
+    public static ThingDef Plant_StrangeFruitTree;
+    public static ThingDef ThingDef_StrangeFruit;
+    public static ThingDef ThingDef_PlaceholderMaterial;
+    public static ThingDef DivineEater;
+    public static ThingDef ThingDef_RaisedWood;
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

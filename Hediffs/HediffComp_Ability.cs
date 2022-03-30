@@ -9,6 +9,7 @@ using Verse;
 
 namespace HediffsAbilities.Hediffs
 {
+<<<<<<< HEAD
     public class HediffComp_Ability : HediffComp
     {
         public HediffCompProperties_Ability Props => props as HediffCompProperties_Ability;
@@ -27,4 +28,24 @@ namespace HediffsAbilities.Hediffs
             Comp_Race.InitVerbsFromZero();
         }
     }
+=======
+  public class HediffComp_Ability : HediffComp
+  {
+    public HediffCompProperties_Ability Props => this.props as HediffCompProperties_Ability;
+
+    private Comp_RaceComp comp_Race => ((ThingWithComps) ((Hediff) this.parent).pawn).GetComp<Comp_RaceComp>();
+
+    public virtual void CompPostPostAdd(DamageInfo? dinfo)
+    {
+      base.CompPostPostAdd(dinfo);
+      this.comp_Race.InitVerbsFromZero();
+    }
+
+    public virtual void CompPostPostRemoved()
+    {
+      base.CompPostPostRemoved();
+      this.comp_Race.InitVerbsFromZero();
+    }
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

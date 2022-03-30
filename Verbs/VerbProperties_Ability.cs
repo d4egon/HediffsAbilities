@@ -9,6 +9,7 @@ using Verse;
 
 namespace HediffsAbilities.Verbs
 {
+<<<<<<< HEAD
     public class VerbProperties_Ability : VerbProperties
     {
         public float powerCost;
@@ -24,4 +25,21 @@ namespace HediffsAbilities.Verbs
         public List<IntVec2> pattern;
         public bool ignoreRange;
     }
+=======
+  public class VerbProperties_Ability : VerbProperties
+  {
+    public float powerCost;
+    [MustTranslate]
+    public string description;
+    public HediffDef hediffDef;
+    public FleckDef fleckDef;
+    public ThingDef moteDef;
+    public float damageAmount;
+    public float severity;
+    public FloatRange conditionDaysRange;
+    public GameConditionDef gameConditionDef;
+    public List<IntVec2> pattern;
+    public bool ignoreRange;
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

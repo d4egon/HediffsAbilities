@@ -9,6 +9,7 @@ using Verse;
 
 namespace HediffsAbilities.Verbs
 {
+<<<<<<< HEAD
     public class Verb_MapTeleport : Verb_AbilityHediff
     {
         public override void WarmupComplete()
@@ -17,4 +18,14 @@ namespace HediffsAbilities.Verbs
             Find.WindowStack.Add(new Window_MapTeleport(CasterPawn));
         }
     }
+=======
+  public class Verb_MapTeleport : Verb_AbilityHediff
+  {
+    public override void WarmupComplete()
+    {
+      base.WarmupComplete();
+      Find.WindowStack.Add((Window) new Window_MapTeleport(((Verb) this).CasterPawn));
+    }
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

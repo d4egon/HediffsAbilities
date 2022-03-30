@@ -9,6 +9,7 @@ using Verse;
 
 namespace HediffsAbilities
 {
+<<<<<<< HEAD
     [DefOf]
     public static class HediffDefOfLocal
     {
@@ -16,4 +17,13 @@ namespace HediffsAbilities
         //public static HediffDef HediffDef_Fruit;
         public static HediffDef Prostheses_HediffDef_EyeVIII;
     }
+=======
+  [DefOf]
+  public static class HediffDefOfLocal
+  {
+    public static HediffDef HediffDef_Illusion;
+    public static HediffDef HediffDef_Fruit;
+    public static HediffDef Prostheses_HediffDef_EyeVIII;
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

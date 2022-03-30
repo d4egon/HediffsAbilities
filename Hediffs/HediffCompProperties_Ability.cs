@@ -10,10 +10,19 @@ using Verse;
 
 namespace HediffsAbilities.Hediffs
 {
+<<<<<<< HEAD
     public class HediffCompProperties_Ability : HediffCompProperties
     {
         public List<VerbProperties_Ability> verbProps = new List<VerbProperties_Ability>();
 
         public HediffCompProperties_Ability() => compClass = typeof(HediffComp_Ability);
     }
+=======
+  public class HediffCompProperties_Ability : HediffCompProperties
+  {
+    public List<VerbProperties_Ability> verbProps = new List<VerbProperties_Ability>();
+
+    public HediffCompProperties_Ability() => this.compClass = typeof (HediffComp_Ability);
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

@@ -10,6 +10,7 @@ using Verse;
 
 namespace HediffsAbilities.Verbs
 {
+<<<<<<< HEAD
     public class Verb_MakeGameCondition : Verb_AbilityHediff
     {
         public override void WarmupComplete()
@@ -21,4 +22,17 @@ namespace HediffsAbilities.Verbs
             Find.LetterStack.ReceiveLetter(Props.gameConditionDef.label, Props.gameConditionDef.description, LetterDefOf.ThreatBig, null);
         }
     }
+=======
+  public class Verb_MakeGameCondition : Verb_AbilityHediff
+  {
+    public override void WarmupComplete()
+    {
+      if (((Verb) this).CasterPawn.Dead)
+        return;
+      base.WarmupComplete();
+      ((Thing) ((Verb) this).CasterPawn).Map.GameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(this.Props.gameConditionDef, Mathf.RoundToInt(((FloatRange) ref this.Props.conditionDaysRange).RandomInRange * 60000f)));
+      Find.LetterStack.ReceiveLetter(TaggedString.op_Implicit(((Def) this.Props.gameConditionDef).label), TaggedString.op_Implicit(((Def) this.Props.gameConditionDef).description), LetterDefOf.ThreatBig, (string) null);
+    }
+  }
+>>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }
