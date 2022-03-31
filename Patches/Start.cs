@@ -9,17 +9,9 @@ using Verse;
 
 namespace HediffsAbilities.Patches
 {
-<<<<<<< HEAD
     [StaticConstructorOnStartup]
     public static class Start
     {
         static Start() => new Harmony("DimonSever000.HediffsAbilities").PatchAll();
     }
-=======
-  [StaticConstructorOnStartup]
-  public static class Start
-  {
-    static Start() => new Harmony("DimonSever000.HediffsAbilities").PatchAll();
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

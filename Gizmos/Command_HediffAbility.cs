@@ -10,22 +10,19 @@ using Verse;
 
 namespace HediffsAbilities.Gizmos
 {
-<<<<<<< HEAD
     public class Command_HediffAbility : Command_VerbTarget
     {
-        public Verb_AbilityHediff Verb => this.verb as Verb_AbilityHediff;
+        public Verb_AbilityHediff Verb => verb as Verb_AbilityHediff;
 
         public virtual string GetTopRightLabel()
         {
             return Math.Round(Verb.Props.powerCost, 1).ToString() + " ";
         }
     }
-=======
   public class Command_HediffAbility : Command_VerbTarget
   {
-    public Verb_AbilityHediff Verb => this.verb as Verb_AbilityHediff;
+    public Verb_AbilityHediff Verb => verb as Verb_AbilityHediff;
 
     public virtual string TopRightLabel => Math.Round((double) this.Verb.Props.powerCost, 1).ToString() + " ";
   }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

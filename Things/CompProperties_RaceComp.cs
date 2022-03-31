@@ -8,7 +8,6 @@ using Verse;
 
 namespace HediffsAbilities.Things
 {
-<<<<<<< HEAD
     public class CompProperties_RaceComp : CompProperties
     {
         public float powerBase;
@@ -21,18 +20,4 @@ namespace HediffsAbilities.Things
             this.powerGain = powerGain;
         }
     }
-=======
-  public class CompProperties_RaceComp : CompProperties
-  {
-    public float powerBase;
-    public float powerGain;
-
-    public CompProperties_RaceComp(float powerBase, float powerGain)
-    {
-      this.compClass = typeof (Comp_RaceComp);
-      this.powerBase = powerBase;
-      this.powerGain = powerGain;
-    }
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

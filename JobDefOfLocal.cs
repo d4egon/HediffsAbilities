@@ -9,17 +9,10 @@ using Verse;
 
 namespace HediffsAbilities
 {
-<<<<<<< HEAD
     [DefOf]
     public static class JobDefOfLocal
     {
         //public static JobDef JobDef_SacrificeSelf;
     }
-=======
-  [DefOf]
-  public static class JobDefOfLocal
-  {
-    public static JobDef JobDef_SacrificeSelf;
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
+
 }

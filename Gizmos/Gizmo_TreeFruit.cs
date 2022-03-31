@@ -3,11 +3,7 @@
 // Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
-<<<<<<< HEAD
 /*
-=======
-
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 using HediffsAbilities.Things;
 using System;
 using UnityEngine;
@@ -33,28 +29,23 @@ namespace HediffsAbilities.Gizmos
     {
       Rect rect1;
       // ISSUE: explicit constructor call
-<<<<<<< HEAD
       rect1.\u002Ector(topLeft.x, topLeft.y, base.GetWidth(maxWidth), 75f);
       Rect rect2 = GenUI.ContractedBy(rect1, 6f);
       Widgets.DrawWindowBackground(rect1);
       Rect rect3 = rect2;
       rect3.height = rect1.height / 2f;
-=======
+
       ((Rect) ref rect1).\u002Ector(topLeft.x, topLeft.y, base.GetWidth(maxWidth), 75f);
       Rect rect2 = GenUI.ContractedBy(rect1, 6f);
       Widgets.DrawWindowBackground(rect1);
       Rect rect3 = rect2;
       ((Rect) ref rect3).height = ((Rect) ref rect1).height / 2f;
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
       Text.Font = (GameFont) 0;
       Text.Anchor = (TextAnchor) 4;
       Widgets.Label(rect3, Translator.Translate("HediffsAbilities.GUI.TreeFruit"));
       Rect rect4 = rect2;
-<<<<<<< HEAD
       rect4.yMin = rect2.y + rect2.height / 2f;
-=======
       ((Rect) ref rect4).yMin = ((Rect) ref rect2).y + ((Rect) ref rect2).height / 2f;
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
       float num1 = this.tree.FruitProgres / this.tree.FruitProgresMax;
       Widgets.FillableBar(rect4, num1, Gizmo_TreeFruit.FullShieldBarTex, Gizmo_TreeFruit.EmptyShieldBarTex, false);
       Text.Font = (GameFont) 1;
@@ -75,7 +66,4 @@ namespace HediffsAbilities.Gizmos
     }
   }
 }
-<<<<<<< HEAD
 */
-=======
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2

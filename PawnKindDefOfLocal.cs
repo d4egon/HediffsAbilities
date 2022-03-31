@@ -9,17 +9,9 @@ using Verse;
 
 namespace HediffsAbilities
 {
-<<<<<<< HEAD
     [DefOf]
     public static class PawnKindDefOfLocal
     {
         //public static PawnKindDef PawnKindDef_DivineEater;
     }
-=======
-  [DefOf]
-  public static class PawnKindDefOfLocal
-  {
-    public static PawnKindDef PawnKindDef_DivineEater;
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

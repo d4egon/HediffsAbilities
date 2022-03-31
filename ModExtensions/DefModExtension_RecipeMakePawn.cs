@@ -8,19 +8,11 @@ using Verse;
 
 namespace HediffsAbilities.ModExtensions
 {
-<<<<<<< HEAD
     public class DefModExtension_RecipeMakePawn : DefModExtension
     {
         public PawnKindDef pawnForSpawn;
         public int count;
         public bool shouldRecruit;
     }
-=======
-  public class DefModExtension_RecipeMakePawn : DefModExtension
-  {
-    public PawnKindDef pawnForSpawn;
-    public int count;
-    public bool shouldRecruit;
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
+
 }

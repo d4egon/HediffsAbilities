@@ -9,7 +9,6 @@ using Verse;
 
 namespace HediffsAbilities.Hediffs
 {
-<<<<<<< HEAD
     public class HediffCompProperties_AddSkills : HediffCompProperties
     {
         public SkillDef skillDef;
@@ -17,13 +16,4 @@ namespace HediffsAbilities.Hediffs
 
         public HediffCompProperties_AddSkills() => compClass = typeof(HediffComp_AddSkills);
     }
-=======
-  public class HediffCompProperties_AddSkills : HediffCompProperties
-  {
-    public SkillDef skillDef;
-    public int levels;
-
-    public HediffCompProperties_AddSkills() => this.compClass = typeof (HediffComp_AddSkills);
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }

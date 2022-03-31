@@ -8,17 +8,10 @@ using RimWorld;
 
 namespace HediffsAbilities
 {
-<<<<<<< HEAD
     [DefOf]
     public static class StatDefOfLocal
     {
         //public static StatDef StatDef_IllusionResistance;
     }
-=======
-  [DefOf]
-  public static class StatDefOfLocal
-  {
-    public static StatDef StatDef_IllusionResistance;
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
+
 }

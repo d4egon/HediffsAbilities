@@ -5,7 +5,6 @@
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
 using RimWorld;
-<<<<<<< HEAD
 
 namespace HediffsAbilities.Verbs
 {
@@ -21,22 +20,4 @@ namespace HediffsAbilities.Verbs
             currentTarget.Pawn.Notify_Teleported(true, true);
         }
     }
-=======
-using Verse;
-
-namespace HediffsAbilities.Verbs
-{
-  public class Verb_TeleportToCaster : Verb_AbilityHediff
-  {
-    public override void WarmupComplete()
-    {
-      base.WarmupComplete();
-      this.AddEffecterToMaintain(EffecterDefOf.Skip_Entry.Spawn(((Thing) ((LocalTargetInfo) ref ((Verb) this).currentTarget).Pawn).Position, ((Thing) ((Verb) this).CasterPawn).Map, 1f), ((LocalTargetInfo) ref ((Verb) this).currentTarget).Cell, 120, ((LocalTargetInfo) ref ((Verb) this).currentTarget).Pawn);
-      this.AddEffecterToMaintain(EffecterDefOf.Skip_Entry.Spawn(((Thing) ((Verb) this).CasterPawn).Position, ((Thing) ((Verb) this).CasterPawn).Map, 1f), ((Thing) ((Verb) this).CasterPawn).Position, 120, ((Verb) this).CasterPawn);
-      ((Thing) ((LocalTargetInfo) ref ((Verb) this).currentTarget).Pawn).Position = ((Thing) ((Verb) this).CasterPawn).Position;
-      ((LocalTargetInfo) ref ((Verb) this).currentTarget).Pawn.stances.stunner.StunFor(120, (Thing) ((Verb) this).CasterPawn, false, false);
-      ((LocalTargetInfo) ref ((Verb) this).currentTarget).Pawn.Notify_Teleported(true, true);
-    }
-  }
->>>>>>> e92050d7e21e101c22fa4209e396d0084c1c39e2
 }
