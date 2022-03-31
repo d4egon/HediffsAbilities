@@ -10,7 +10,7 @@ using Verse;
 
 namespace NarutoMod.Gizmos
 {
-    public class Command_HediffAbility : Command_VerbTarget
+    public class NM_Command_HediffAbility : Command_VerbTarget
     {
         public NM_Verb_AbilityHediff Verb => verb as NM_Verb_AbilityHediff;
 

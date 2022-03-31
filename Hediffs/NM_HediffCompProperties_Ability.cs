@@ -14,6 +14,6 @@ namespace NarutoMod.Hediffs
     {
         public List<NM_VerbProperties_Ability> verbProps = new List<NM_VerbProperties_Ability>();
 
-        public NM_HediffCompProperties_Ability() => compClass = typeof(HediffComp_Ability);
+        public NM_HediffCompProperties_Ability() => compClass = typeof(NM_HediffComp_Ability);
     }
 }

@@ -9,11 +9,11 @@ using Verse;
 
 namespace NarutoMod.Hediffs
 {
-    public class HediffComp_Ability : HediffComp
+    public class NM_HediffComp_Ability : HediffComp
     {
         public NM_HediffCompProperties_Ability Props => props as NM_HediffCompProperties_Ability;
 
-        private Comp_RaceComp Comp_Race => parent.pawn.GetComp<Comp_RaceComp>();
+        private NM_Comp_RaceComp Comp_Race => parent.pawn.GetComp<NM_Comp_RaceComp>();
 
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {

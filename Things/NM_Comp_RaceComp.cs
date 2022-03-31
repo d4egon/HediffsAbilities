@@ -16,14 +16,14 @@ using Verse;
 
 namespace NarutoMod.Things
 {
-    public class Comp_RaceComp : ThingComp
+    public class NM_Comp_RaceComp : ThingComp
     {
         private float power;
         public List<NM_Verb_AbilityHediff> verbs;
 
-        public Pawn parentPawn => parent as Pawn;
+        public Pawn ParentPawn => parent as Pawn;
 
-        public CompProperties_RaceComp Props => props as CompProperties_RaceComp;
+        public NM_CompProperties_RaceComp Props => props as NM_CompProperties_RaceComp;
 
         public int Tick => Find.TickManager.TicksGame;
 
@@ -60,9 +60,9 @@ namespace NarutoMod.Things
         private void InitVerbs(Func<Type, string, NM_Verb_AbilityHediff> creator)
         {
             List<NM_VerbProperties_Ability> propertiesAbilityList = new List<NM_VerbProperties_Ability>();
-            foreach (HediffComp hediffComp in parentPawn.health.hediffSet.GetAllComps().ToList<HediffComp>())
+            foreach (HediffComp hediffComp in ParentPawn.health.hediffSet.GetAllComps().ToList())
             {
-                if (hediffComp is HediffComp_Ability hediffCompAbility)
+                if (hediffComp is NM_HediffComp_Ability hediffCompAbility)
                     propertiesAbilityList.AddRange(hediffCompAbility.Props.verbProps);
             }
             for (int index = 0; index < propertiesAbilityList.Count; ++index)
@@ -77,45 +77,47 @@ namespace NarutoMod.Things
         {
             verb.loadID = id;
             verb.verbProps = properties;
-            verb.verbTracker = parentPawn.verbTracker;
+            verb.verbTracker = ParentPawn.verbTracker;
             verb.caster = parent;
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            Comp_RaceComp compRaceComp = this;
+            NM_Comp_RaceComp compRaceComp = this;
             if (compRaceComp.AllVerbs.Count() != 0)
             {
-                yield return (Gizmo)compRaceComp.CreateGizmoPower();
+                yield return compRaceComp.CreateGizmoPower();
                 if (Prefs.DevMode)
                 {
                     Command_Action commandAction1 = new Command_Action();
-                    ((Command)commandAction1).defaultLabel = "Debug: max power";
-                    // ISSUE: reference to a compiler-generated method
-                    commandAction1.action = new Action(compRaceComp.< CompGetGizmosExtra > __19_0);
-                    yield return (Gizmo)commandAction1;
+                    (commandAction1).defaultLabel = "Debug: max power";
+                    commandAction1.action = () => { power = MaxPower; };
+                    yield return commandAction1;
+
+
                     Command_Action commandAction2 = new Command_Action();
-                    ((Command)commandAction2).defaultLabel = "Debug: reload verbs";
-                    // ISSUE: reference to a compiler-generated method
-                    commandAction2.action = new Action(compRaceComp.< CompGetGizmosExtra > __19_1);
-                    yield return (Gizmo)commandAction2;
+                    (commandAction2).defaultLabel = "Debug: reload verbs";
+                    commandAction2.action = () => { InitVerbsFromZero(); };
+                    yield return commandAction2;
                 }
             }
             foreach (NM_Verb_AbilityHediff allVerb in compRaceComp.AllVerbs)
                 yield return compRaceComp.CreateVerbTargetCommand(allVerb);
         }
 
-        private Command_HediffAbility CreateVerbTargetCommand(
+        private NM_Command_HediffAbility CreateVerbTargetCommand(
           NM_Verb_AbilityHediff verb)
         {
-            Command_HediffAbility commandHediffAbility = new Command_HediffAbility();
-            (commandHediffAbility).defaultDesc = verb.Props.description;
-            commandHediffAbility.defaultLabel = verb.Props.label;
-            commandHediffAbility.verb = verb;
-            commandHediffAbility.icon = ContentFinder<Texture2D>.Get(verb.verbProps.commandIcon, true);
-            commandHediffAbility.order = 100f;
-            Command_HediffAbility verbTargetCommand = commandHediffAbility;
-            if (!parentPawn.IsColonistPlayerControlled)
+            NM_Command_HediffAbility commandHediffAbility = new NM_Command_HediffAbility
+            {
+                defaultDesc = verb.Props.description,
+                defaultLabel = verb.Props.label,
+                verb = verb,
+                icon = ContentFinder<Texture2D>.Get(verb.verbProps.commandIcon, true),
+                order = 100f
+            };
+            NM_Command_HediffAbility verbTargetCommand = commandHediffAbility;
+            if (!ParentPawn.IsColonistPlayerControlled)
             {
                 verbTargetCommand.Disable(null);
             }
@@ -128,7 +130,7 @@ namespace NarutoMod.Things
             return verbTargetCommand;
         }
 
-        private Gizmo_Power CreateGizmoPower() => new Gizmo_Power()
+        private NM_Gizmo_Power CreateGizmoPower() => new NM_Gizmo_Power()
         {
             comp = this
         };

@@ -1,19 +1,17 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.HediffDefOfLocal
+// Type: HediffsAbilities.Patches.Start
 // Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
-using RimWorld;
+using HarmonyLib;
 using Verse;
 
-namespace NarutoMod
+namespace NarutoMod.Patches
 {
-    [DefOf]
-    public static class HediffDefOfLocal
+    [StaticConstructorOnStartup]
+    public static class NM_Start
     {
-        //public static HediffDef HediffDef_Illusion;
-        //public static HediffDef HediffDef_Fruit;
-        //public static HediffDef Prostheses_HediffDef_EyeVIII;
+        static NM_Start() => new Harmony("Aritocrats_Edo.NarutoMod").PatchAll();
     }
 }

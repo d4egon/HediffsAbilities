@@ -5,7 +5,6 @@
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,16 +12,16 @@ using Verse;
 
 namespace NarutoMod.GUI
 {
-    public class Window_MapTeleport : Window
+    public class NM_Window_MapTeleport : Window
     {
         private Vector2 scrollPosition = Vector2.zero;
         private Pawn pawn;
 
         public override Vector2 InitialSize => new Vector2(600f, 400f);
 
-        private List<Map> maps => ((IEnumerable<Map>)Find.Maps).Where(x => x != pawn.Map).ToList();
+        private List<Map> Maps => ((IEnumerable<Map>)Find.Maps).Where(x => x != pawn.Map).ToList();
 
-        public Window_MapTeleport(Pawn pawn)
+        public NM_Window_MapTeleport(Pawn pawn)
         {
             draggable = false;
             resizeable = false;
@@ -40,7 +39,7 @@ namespace NarutoMod.GUI
             Text.Font = (GameFont)2;
             Widgets.Label(rect1, Translator.Translate("HediffsAbilities.GUI.MapsList"));
             Text.Font = (GameFont)1;
-            if (GenList.NullOrEmpty(maps))
+            if (GenList.NullOrEmpty(Maps))
                 Widgets.Label(new Rect(rect1.x, rect1.y + rect1.height, rect1.width, 60f), Translator.Translate("HediffsAbilities.GUI.NullMapsList"));
             Text.Anchor = 0;
             Rect rect2;
@@ -48,16 +47,15 @@ namespace NarutoMod.GUI
             rect2 = new Rect(30f, 70f, base.InitialSize.x - 70f, 240f);
             Rect rect3;
             // ISSUE: explicit constructor call
-            rect3 = new Rect(0.0f, 0.0f, rect2.x, maps.Count * 30);
+            rect3 = new Rect(0.0f, 0.0f, rect2.x, Maps.Count * 30);
             Widgets.BeginScrollView(rect2, ref scrollPosition, rect3, true);
             int num1 = 0;
             float num2 = rect2.width - 20f;
-            foreach (Map map in maps)
+            foreach (Map map in Maps)
             {
-                if (Widgets.ButtonText(new Rect(0.0f, (num1 * 30, num2, 30f), map.TileInfo.biome.LabelCap + map.Tile.ToString(), true, true, true))
-                {
-                    IntVec3 pos;
-                    if (TryFindShipChunkDropCell(map.Center, map, map.Size.x / 2, out pos))
+                if (Widgets.ButtonText(new Rect(0.0f, num1 * 30, num2, 30f), map.TileInfo.biome.LabelCap + map.Tile.ToString(), true, true, true))
+                    {
+                    if (TryFindShipChunkDropCell(map.Center, map, map.Size.x / 2, out IntVec3 pos))
                     {
                         pawn.DeSpawn(0);
                         GenSpawn.Spawn(pawn, pos, map, 0);
@@ -72,6 +70,6 @@ namespace NarutoMod.GUI
             Widgets.EndScrollView();
         }
 
-        private bool TryFindShipChunkDropCell(IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos) => CellFinderLoose.TryFindSkyfallerCell(ThingDefOf.ShipChunkIncoming, map, ref pos, 10, nearLoc, maxDist, true, false, false, false, true, false, (Predicate<IntVec3>)null);
+        private bool TryFindShipChunkDropCell(IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos) => CellFinderLoose.TryFindSkyfallerCell(ThingDefOf.ShipChunkIncoming, map, out pos, 10, nearLoc, maxDist, true, false, false, false, true, false, null);
     }
 }

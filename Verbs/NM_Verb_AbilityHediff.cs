@@ -15,7 +15,7 @@ namespace NarutoMod.Verbs
     {
         public List<Pair<Effecter, TargetInfo>> maintainedEffecters = new List<Pair<Effecter, TargetInfo>>();
 
-        private Comp_RaceComp Comp => CasterPawn.GetComp<Comp_RaceComp>();
+        private NM_Comp_RaceComp Comp => CasterPawn.GetComp<NM_Comp_RaceComp>();
 
         public NM_VerbProperties_Ability Props => verbProps as NM_VerbProperties_Ability;
 

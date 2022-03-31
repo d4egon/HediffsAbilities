@@ -14,7 +14,7 @@ namespace NarutoMod.Verbs
         public override void WarmupComplete()
         {
             base.WarmupComplete();
-            Find.WindowStack.Add(new Window_MapTeleport(CasterPawn));
+            Find.WindowStack.Add(new NM_Window_MapTeleport(CasterPawn));
         }
     }
 

@@ -18,7 +18,7 @@ namespace NarutoMod.Verbs
             base.WarmupComplete();
             Map map = CasterPawn.Map;
             List<Thing> thingList = new List<Thing>();
-            thingList.AddRange(AffectedCells(CurrentTarget, map).SelectMany((Func<IntVec3, IEnumerable<Thing>>)(c => ((IEnumerable<Thing>)GridsUtility.GetThingList(c, map)).Where<Thing>((Func<Thing, bool>)(t => t.def.category == 2)))));
+            thingList.AddRange(AffectedCells(CurrentTarget, map).SelectMany((Func<IntVec3, IEnumerable<Thing>>)(c => ((IEnumerable<Thing>)GridsUtility.GetThingList(c, map)).Where(t => t.def.category == ThingCategory.Item))));
             foreach (Entity entity in thingList)
                 entity.DeSpawn(0);
             foreach (IntVec3 affectedCell in AffectedCells(CurrentTarget, map))
@@ -28,7 +28,7 @@ namespace NarutoMod.Verbs
                 IntVec3 intVec3_1 = IntVec3.Invalid;
                 for (int index = 0; index < 9; ++index)
                 {
-                    IntVec3 intVec3_2 = thing.Position, GenRadial.RadialPattern[index];
+                    IntVec3 intVec3_2 = thing.Position + GenRadial.RadialPattern[index];
                     if (GenGrid.InBounds(intVec3_2, map) && GenGrid.Walkable(intVec3_2, map) && map.thingGrid.ThingsListAtFast(intVec3_2).Count <= 0)
                     {
                         intVec3_1 = intVec3_2;
@@ -41,15 +41,12 @@ namespace NarutoMod.Verbs
                     GenPlace.TryPlaceThing(thing, thing.Position, map, (ThingPlaceMode)1, null, null, new Rot4());
             }
         }
-
         private IEnumerable<IntVec3> AffectedCells(LocalTargetInfo target, Map map)
         {
             foreach (IntVec2 intVec2 in Props.pattern)
             {
-                LocalTargetInfo localTargetInfo;
-                IntVec3 intVec3 = IntVec3.op_Addition(localTargetInfo.Cell, new IntVec3(intVec2.x, 0, intVec2.z));
-                Map map1;
-                if (GenGrid.InBounds(intVec3, map1))
+                IntVec3 intVec3 = target.Cell + new IntVec3(intVec2.x, 0, intVec2.z);
+                if (GenGrid.InBounds(intVec3, map))
                     yield return intVec3;
             }
         }

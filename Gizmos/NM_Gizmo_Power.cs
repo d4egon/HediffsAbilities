@@ -12,13 +12,13 @@ using Verse;
 namespace NarutoMod.Gizmos
 {
     [StaticConstructorOnStartup]
-    public class Gizmo_Power : Gizmo
+    public class NM_Gizmo_Power : Gizmo
     {
         private static readonly Texture2D FullShieldBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
         private static readonly Texture2D EmptyShieldBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
-        public Comp_RaceComp comp;
+        public NM_Comp_RaceComp comp;
 
-        public Gizmo_Power() => order = -1000f;
+        public NM_Gizmo_Power() => order = -1000f;
 
         public override float GetWidth(float maxWidth) => 140f;
 
