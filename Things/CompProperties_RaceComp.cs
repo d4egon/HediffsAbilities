@@ -6,7 +6,7 @@
 
 using Verse;
 
-namespace HediffsAbilities.Things
+namespace NarutoMod.Things
 {
     public class CompProperties_RaceComp : CompProperties
     {

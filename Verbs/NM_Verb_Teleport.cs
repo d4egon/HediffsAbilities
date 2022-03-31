@@ -8,11 +8,11 @@ using RimWorld;
 using System.Linq;
 using Verse;
 
-namespace HediffsAbilities.Verbs
+namespace NarutoMod.Verbs
 {
-    public class Verb_Teleport : Verb_AbilityHediff
+    public class NM_Verb_Teleport : NM_Verb_AbilityHediff
     {
-        protected override float EffectiveRange => !Props.ignoreRange ? ((Verb)this).EffectiveRange : 999f;
+        protected override float EffectiveRange => !Props.ignoreRange ? EffectiveRange : 999f;
 
         public override void WarmupComplete()
         {

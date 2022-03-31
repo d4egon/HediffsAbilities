@@ -11,7 +11,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace HediffsAbilities.GUI
+namespace NarutoMod.GUI
 {
     public class Window_MapTeleport : Window
     {
@@ -54,7 +54,7 @@ namespace HediffsAbilities.GUI
             float num2 = rect2.width - 20f;
             foreach (Map map in maps)
             {
-                if (Widgets.ButtonText(new Rect(0.0f, (float)(num1 * 30), num2, 30f), TaggedString.op_Addition(((Def)map.TileInfo.biome).LabelCap, string.Format(", {0}: ", (object)Translator.Translate("HediffsAbilities.GUI.TileId")) + map.Tile.ToString(), true, true, true)))
+                if (Widgets.ButtonText(new Rect(0.0f, (num1 * 30, num2, 30f), map.TileInfo.biome.LabelCap + map.Tile.ToString(), true, true, true))
                 {
                     IntVec3 pos;
                     if (TryFindShipChunkDropCell(map.Center, map, map.Size.x / 2, out pos))

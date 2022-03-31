@@ -4,12 +4,12 @@
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
-using HediffsAbilities.Things;
+using NarutoMod.Things;
 using System;
 using UnityEngine;
 using Verse;
 
-namespace HediffsAbilities.Gizmos
+namespace NarutoMod.Gizmos
 {
     [StaticConstructorOnStartup]
     public class Gizmo_Power : Gizmo

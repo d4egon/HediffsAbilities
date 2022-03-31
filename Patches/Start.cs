@@ -7,7 +7,7 @@
 using HarmonyLib;
 using Verse;
 
-namespace HediffsAbilities.Patches
+namespace NarutoMod.Patches
 {
     [StaticConstructorOnStartup]
     public static class Start

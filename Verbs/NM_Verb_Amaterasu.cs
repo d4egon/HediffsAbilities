@@ -7,9 +7,9 @@
 using RimWorld;
 using Verse;
 
-namespace HediffsAbilities.Verbs
+namespace NarutoMod.Verbs
 {
-    public class Verb_Amaterasu : Verb_AbilityHediff
+    public class NM_Verb_Amaterasu : NM_Verb_AbilityHediff
     {
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {

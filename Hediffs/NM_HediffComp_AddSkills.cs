@@ -8,11 +8,11 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace HediffsAbilities.Hediffs
+namespace NarutoMod.Hediffs
 {
-    public class HediffComp_AddSkills : HediffComp
+    public class NM_HediffComp_AddSkills : HediffComp
     {
-        public HediffCompProperties_AddSkills Props => props as HediffCompProperties_AddSkills;
+        public NM_HediffCompProperties_AddSkills Props => props as NM_HediffCompProperties_AddSkills;
 
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {

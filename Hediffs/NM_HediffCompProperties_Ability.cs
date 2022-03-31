@@ -4,16 +4,16 @@
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
-using HediffsAbilities.Verbs;
+using NarutoMod.Verbs;
 using System.Collections.Generic;
 using Verse;
 
-namespace HediffsAbilities.Hediffs
+namespace NarutoMod.Hediffs
 {
-    public class HediffCompProperties_Ability : HediffCompProperties
+    public class NM_HediffCompProperties_Ability : HediffCompProperties
     {
-        public List<VerbProperties_Ability> verbProps = new List<VerbProperties_Ability>();
+        public List<NM_VerbProperties_Ability> verbProps = new List<NM_VerbProperties_Ability>();
 
-        public HediffCompProperties_Ability() => compClass = typeof(HediffComp_Ability);
+        public NM_HediffCompProperties_Ability() => compClass = typeof(HediffComp_Ability);
     }
 }

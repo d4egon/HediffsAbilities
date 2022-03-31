@@ -4,9 +4,9 @@
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
-using HediffsAbilities.Gizmos;
-using HediffsAbilities.Hediffs;
-using HediffsAbilities.Verbs;
+using NarutoMod.Gizmos;
+using NarutoMod.Hediffs;
+using NarutoMod.Verbs;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -14,12 +14,12 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace HediffsAbilities.Things
+namespace NarutoMod.Things
 {
     public class Comp_RaceComp : ThingComp
     {
         private float power;
-        public List<Verb_AbilityHediff> verbs;
+        public List<NM_Verb_AbilityHediff> verbs;
 
         public Pawn parentPawn => parent as Pawn;
 
@@ -33,7 +33,7 @@ namespace HediffsAbilities.Things
 
         public float Power => power;
 
-        public List<Verb_AbilityHediff> AllVerbs
+        public List<NM_Verb_AbilityHediff> AllVerbs
         {
             get
             {
@@ -48,18 +48,18 @@ namespace HediffsAbilities.Things
 
         public void InitVerbsFromZero()
         {
-            verbs = new List<Verb_AbilityHediff>();
+            verbs = new List<NM_Verb_AbilityHediff>();
             InitVerbs((type, id) =>
            {
-               Verb_AbilityHediff instance = (Verb_AbilityHediff)Activator.CreateInstance(type);
+               NM_Verb_AbilityHediff instance = (NM_Verb_AbilityHediff)Activator.CreateInstance(type);
                verbs.Add(instance);
                return instance;
            });
         }
 
-        private void InitVerbs(Func<Type, string, Verb_AbilityHediff> creator)
+        private void InitVerbs(Func<Type, string, NM_Verb_AbilityHediff> creator)
         {
-            List<VerbProperties_Ability> propertiesAbilityList = new List<VerbProperties_Ability>();
+            List<NM_VerbProperties_Ability> propertiesAbilityList = new List<NM_VerbProperties_Ability>();
             foreach (HediffComp hediffComp in parentPawn.health.hediffSet.GetAllComps().ToList<HediffComp>())
             {
                 if (hediffComp is HediffComp_Ability hediffCompAbility)
@@ -67,13 +67,13 @@ namespace HediffsAbilities.Things
             }
             for (int index = 0; index < propertiesAbilityList.Count; ++index)
             {
-                VerbProperties_Ability properties = propertiesAbilityList[index];
+                NM_VerbProperties_Ability properties = propertiesAbilityList[index];
                 string id = "HediffVerbOfMod_" + index.ToString();
                 InitVerb(creator(properties.verbClass, id), properties, id);
             }
         }
 
-        private void InitVerb(Verb_AbilityHediff verb, VerbProperties_Ability properties, string id)
+        private void InitVerb(NM_Verb_AbilityHediff verb, NM_VerbProperties_Ability properties, string id)
         {
             verb.loadID = id;
             verb.verbProps = properties;
@@ -101,12 +101,12 @@ namespace HediffsAbilities.Things
                     yield return (Gizmo)commandAction2;
                 }
             }
-            foreach (Verb_AbilityHediff allVerb in compRaceComp.AllVerbs)
+            foreach (NM_Verb_AbilityHediff allVerb in compRaceComp.AllVerbs)
                 yield return compRaceComp.CreateVerbTargetCommand(allVerb);
         }
 
         private Command_HediffAbility CreateVerbTargetCommand(
-          Verb_AbilityHediff verb)
+          NM_Verb_AbilityHediff verb)
         {
             Command_HediffAbility commandHediffAbility = new Command_HediffAbility();
             (commandHediffAbility).defaultDesc = verb.Props.description;

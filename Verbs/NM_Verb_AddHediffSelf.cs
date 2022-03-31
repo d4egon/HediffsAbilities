@@ -6,10 +6,10 @@
 
 using Verse;
 
-namespace HediffsAbilities.Verbs
+namespace NarutoMod.Verbs
 {
 
-    public class Verb_AddHediffSelf : Verb_AbilityHediff
+    public class NM_Verb_AddHediffSelf : NM_Verb_AbilityHediff
     {
         public override void WarmupComplete()
         {

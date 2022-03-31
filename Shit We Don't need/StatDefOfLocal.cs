@@ -6,7 +6,7 @@
 
 using RimWorld;
 
-namespace HediffsAbilities
+namespace NarutoMod
 {
     [DefOf]
     public static class StatDefOfLocal

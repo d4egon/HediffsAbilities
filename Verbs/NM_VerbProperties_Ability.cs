@@ -7,9 +7,9 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace HediffsAbilities.Verbs
+namespace NarutoMod.Verbs
 {
-    public class VerbProperties_Ability : VerbProperties
+    public class NM_VerbProperties_Ability : VerbProperties
     {
         public float powerCost;
         [MustTranslate]

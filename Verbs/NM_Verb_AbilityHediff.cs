@@ -4,24 +4,24 @@
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
 // Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
 
-using HediffsAbilities.Things;
+using NarutoMod.Things;
 using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
-namespace HediffsAbilities.Verbs
+namespace NarutoMod.Verbs
 {
-    public abstract class Verb_AbilityHediff : Verb_CastBase
+    public abstract class NM_Verb_AbilityHediff : Verb_CastBase
     {
         public List<Pair<Effecter, TargetInfo>> maintainedEffecters = new List<Pair<Effecter, TargetInfo>>();
 
-        private Comp_RaceComp comp => CasterPawn.GetComp<Comp_RaceComp>();
+        private Comp_RaceComp Comp => CasterPawn.GetComp<Comp_RaceComp>();
 
-        public VerbProperties_Ability Props => verbProps as VerbProperties_Ability;
+        public NM_VerbProperties_Ability Props => verbProps as NM_VerbProperties_Ability;
 
         public int Tick => Find.TickManager.TicksGame;
 
-        public virtual bool IsReady() => (double)comp.Power >= Props.powerCost;
+        public virtual bool IsReady() => (double)Comp.Power >= Props.powerCost;
 
         public override bool Available() => IsReady() && Available();
 
@@ -34,7 +34,7 @@ namespace HediffsAbilities.Verbs
         public override void WarmupComplete()
         {
             WarmupComplete();
-            comp.Notify_PowerGain(Props.powerCost);
+            Comp.Notify_PowerGain(Props.powerCost);
         }
 
         public void AddEffecterToMaintain(Effecter eff, IntVec3 pos, int ticks, Pawn pawn, Map map = null)

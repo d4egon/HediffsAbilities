@@ -7,10 +7,10 @@
 using RimWorld;
 using Verse;
 
-namespace HediffsAbilities
+namespace NarutoMod
 {
     [DefOf]
-    public static class ThingDefOfLocal
+    public static class NM_ThingDefOf
     {
         //public static ThingDef Plant_StrangeFruitTree;
         //public static ThingDef ThingDef_StrangeFruit;
