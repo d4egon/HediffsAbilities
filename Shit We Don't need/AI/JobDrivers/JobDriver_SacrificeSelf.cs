@@ -1,16 +1,16 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.AI.JobDrivers.JobDriver_SacrificeSelf
-// Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: NarutoMod.AI.JobDrivers.JobDriver_SacrificeSelf
+// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
 /*
-using HediffsAbilities.Things;
+using NarutoMod.Things;
 using System;
 using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
-namespace HediffsAbilities.AI.JobDrivers
+namespace NarutoMod.AI.JobDrivers
 {
   public class JobDriver_SacrificeSelf : JobDriver
   {

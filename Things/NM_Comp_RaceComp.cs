@@ -1,8 +1,8 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.Things.Comp_RaceComp
-// Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: NarutoMod.Things.Comp_RaceComp
+// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
 
 using NarutoMod.Gizmos;
 using NarutoMod.Hediffs;
@@ -122,11 +122,11 @@ namespace NarutoMod.Things
                 verbTargetCommand.Disable(null);
             }
             else if (FireUtility.IsBurning(verb.CasterPawn))
-                verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("HediffsAbilities.GUI.CasterIsBurning", verb.CasterPawn.LabelShort));
+                verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("NarutoMod.GUI.CasterIsBurning", verb.CasterPawn.LabelShort));
             else if (verb.CasterPawn.Downed)
-                verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("HediffsAbilities.GUI.CasterIsDowned", verb.CasterPawn.LabelShort));
+                verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("NarutoMod.GUI.CasterIsDowned", verb.CasterPawn.LabelShort));
             else if (!verb.IsReady())
-                verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("HediffsAbilities.GUI.PowerIsLow", verb.Props.powerCost));
+                verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("NarutoMod.GUI.PowerIsLow", verb.Props.powerCost));
             return verbTargetCommand;
         }
 

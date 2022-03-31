@@ -1,15 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.Gizmos.Gizmo_TreeFuel
-// Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: NarutoMod.Gizmos.Gizmo_TreeFuel
+// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
 /*
-using HediffsAbilities.Things;
+using NarutoMod.Things;
 using System;
 using UnityEngine;
 using Verse;
 
-namespace HediffsAbilities.Gizmos
+namespace NarutoMod.Gizmos
 {
   [StaticConstructorOnStartup]
   public class Gizmo_TreeFuel : Gizmo
@@ -41,7 +41,7 @@ namespace HediffsAbilities.Gizmos
       ((Rect) ref rect3).height = ((Rect) ref rect1).height / 2f;
       Text.Font = (GameFont) 0;
       Text.Anchor = (TextAnchor) 4;
-      Widgets.Label(rect3, Translator.Translate("HediffsAbilities.GUI.TreeFuel"));
+      Widgets.Label(rect3, Translator.Translate("NarutoMod.GUI.TreeFuel"));
       Rect rect4 = rect2;
       rect4.yMin = rect2.y + rect2.height / 2f;
       ((Rect) ref rect4).yMin = ((Rect) ref rect2).y + ((Rect) ref rect2).height / 2f;
@@ -58,7 +58,7 @@ namespace HediffsAbilities.Gizmos
       Text.Anchor = (TextAnchor) 0;
       if (Mouse.IsOver(rect4))
       {
-        string str4 = TaggedString.op_Implicit(TranslatorFormattedStringExtensions.Translate("HediffsAbilities.GUI.TreeFuelPerDay", NamedArgument.op_Implicit(Math.Round((double) this.tree.FuelPerDay, 2))));
+        string str4 = TaggedString.op_Implicit(TranslatorFormattedStringExtensions.Translate("NarutoMod.GUI.TreeFuelPerDay", NamedArgument.op_Implicit(Math.Round((double) this.tree.FuelPerDay, 2))));
         TooltipHandler.TipRegion(rect4, TipSignal.op_Implicit(str4));
       }
       return new GizmoResult((GizmoState) 0);

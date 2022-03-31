@@ -1,8 +1,8 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.GUI.Window_MapTeleport
-// Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: NarutoMod.GUI.Window_MapTeleport
+// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
 
 using RimWorld;
 using System.Collections.Generic;
@@ -37,10 +37,10 @@ namespace NarutoMod.GUI
             rect1 = new Rect(10f, 10f, base.InitialSize.x - 60f, 30f);
             Text.Anchor = (TextAnchor)4;
             Text.Font = (GameFont)2;
-            Widgets.Label(rect1, Translator.Translate("HediffsAbilities.GUI.MapsList"));
+            Widgets.Label(rect1, Translator.Translate("NarutoMod.GUI.MapsList"));
             Text.Font = (GameFont)1;
             if (GenList.NullOrEmpty(Maps))
-                Widgets.Label(new Rect(rect1.x, rect1.y + rect1.height, rect1.width, 60f), Translator.Translate("HediffsAbilities.GUI.NullMapsList"));
+                Widgets.Label(new Rect(rect1.x, rect1.y + rect1.height, rect1.width, 60f), Translator.Translate("NarutoMod.GUI.NullMapsList"));
             Text.Anchor = 0;
             Rect rect2;
             // ISSUE: explicit constructor call
@@ -63,7 +63,7 @@ namespace NarutoMod.GUI
                         Close(true);
                     }
                     else
-                        Messages.Message(Translator.Translate("HediffsAbilities.Messages.TryFindCellFalse"), MessageTypeDefOf.NegativeEvent, true);
+                        Messages.Message(Translator.Translate("NarutoMod.Messages.TryFindCellFalse"), MessageTypeDefOf.NegativeEvent, true);
                 }
                 ++num1;
             }

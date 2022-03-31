@@ -1,15 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.GameConditions.GameCondition_MoonIllusion
-// Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: NarutoMod.GameConditions.GameCondition_MoonIllusion
+// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
 /*
 using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
-namespace HediffsAbilities.GameConditions
+namespace NarutoMod.GameConditions
 {
   public class GameCondition_MoonIllusion : GameCondition
   {

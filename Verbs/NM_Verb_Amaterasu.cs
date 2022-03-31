@@ -1,8 +1,8 @@
 ﻿// Decompiled with JetBrains decompiler
-// Type: HediffsAbilities.Verbs.Verb_Amaterasu
-// Assembly: HediffsAbilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Type: NarutoMod.Verbs.Verb_Amaterasu
+// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
 
 using RimWorld;
 using Verse;
@@ -17,7 +17,7 @@ namespace NarutoMod.Verbs
                 return false;
             if (target.Pawn.FlammableNow)
                 return base.ValidateTarget(target, showMessages);
-            Messages.Message(Translator.Translate("HediffsAbilities.Messages.TargetUnflammable"), MessageTypeDefOf.RejectInput, false);
+            Messages.Message(Translator.Translate("NarutoMod.Messages.TargetUnflammable"), MessageTypeDefOf.RejectInput, false);
             return false;
         }
 
