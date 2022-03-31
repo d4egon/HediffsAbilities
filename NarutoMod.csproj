@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\HediffsAbilities.dll-->
+  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll-->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -79,7 +79,6 @@
     <Compile Include="Shit We Don%27t need\NM_RecipeWorker_MakePawn.cs" />
     <Compile Include="Patches\NM_Start.cs" />
     <Compile Include="Patches\NM_HumanlikeRacesPatch.cs" />
-    <Compile Include="Patches\NM_ThoughtUtility_CanGetThought_HediffsAbilitiesPatch.cs" />
     <Compile Include="ModExtensions\DefModExtension_RecipeMakePawn.cs" />
     <Compile Include="Hediffs\NM_HediffCompProperties_AddSkills.cs" />
     <Compile Include="Hediffs\NM_HediffComp_AddSkills.cs" />
