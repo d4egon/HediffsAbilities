@@ -56,11 +56,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefOfs\NM_AbilityDefOf.cs" />
     <Compile Include="Shit We Don%27t need\NM_JobDefOf.cs" />
-    <Compile Include="Things\NM_StatDefOf.cs" />
-    <Compile Include="Things\NM_HediffDefOf.cs" />
+    <Compile Include="DefOfs\NM_StatDefOf.cs" />
+    <Compile Include="DefOfs\NM_HediffDefOf.cs" />
     <Compile Include="Shit We Don%27t need\NM_PawnKindDefOf.cs" />
-    <Compile Include="Things\NM_ThingDefOf.cs" />
+    <Compile Include="DefOfs\NM_ThingDefOf.cs" />
     <Compile Include="Verbs\NM_VerbProperties_Ability.cs" />
     <Compile Include="Verbs\NM_Verb_AbilityHediff.cs" />
     <Compile Include="Shit We Don%27t need\Verb_MakeGameCondition.cs" />

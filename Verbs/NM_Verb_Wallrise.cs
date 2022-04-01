@@ -18,7 +18,7 @@ namespace NarutoMod.Verbs
             base.WarmupComplete();
             Map map = CasterPawn.Map;
             List<Thing> thingList = new List<Thing>();
-            thingList.AddRange(AffectedCells(CurrentTarget, map).SelectMany((Func<IntVec3, IEnumerable<Thing>>)(c => ((IEnumerable<Thing>)GridsUtility.GetThingList(c, map)).Where(t => t.def.category == ThingCategory.Item))));
+            thingList.AddRange(AffectedCells(CurrentTarget, map).SelectMany(c => ((IEnumerable<Thing>)GridsUtility.GetThingList(c, map)).Where(t => t.def.category == ThingCategory.Item)));
             foreach (Entity entity in thingList)
                 entity.DeSpawn(0);
             foreach (IntVec3 affectedCell in AffectedCells(CurrentTarget, map))

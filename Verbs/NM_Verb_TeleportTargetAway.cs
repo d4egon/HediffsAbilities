@@ -14,7 +14,7 @@ namespace NarutoMod.Verbs
 
     public class NM_Verb_TeleportTargetAway : NM_Verb_AbilityHediff
     {
-        public override void WarmupComplete()
+        public virtual void WarmupComplete()
         {
             base.WarmupComplete();
             AddEffecterToMaintain(EffecterDefOf.Skip_Entry.Spawn(currentTarget.Pawn.Position, CasterPawn.Map, 1f), currentTarget.Cell, 120, currentTarget.Pawn);

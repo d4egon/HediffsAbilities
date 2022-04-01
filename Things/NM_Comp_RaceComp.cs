@@ -68,7 +68,7 @@ namespace NarutoMod.Things
             for (int index = 0; index < propertiesAbilityList.Count; ++index)
             {
                 NM_VerbProperties_Ability properties = propertiesAbilityList[index];
-                string id = "HediffVerbOfMod_" + index.ToString();
+                string id = "NM_HediffVerbOfMod_" + index.ToString();
                 InitVerb(creator(properties.verbClass, id), properties, id);
             }
         }
@@ -133,8 +133,7 @@ namespace NarutoMod.Things
         {
             comp = this
         };
-
-        public override void CompTick()
+        public virtual void CompTick()
         {
             base.CompTick();
             if (Tick % 60 != 0 || AllVerbs == null || AllVerbs.Count == 0)
@@ -146,7 +145,7 @@ namespace NarutoMod.Things
 
         public void Notify_PowerGain(float gain) => power = Mathf.Clamp(power + gain, 0.0f, MaxPower);
 
-        public override void PostExposeData()
+        public virtual void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref power, "power", 0.0f, false);

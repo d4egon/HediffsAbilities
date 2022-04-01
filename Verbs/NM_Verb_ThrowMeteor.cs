@@ -10,7 +10,7 @@ namespace NarutoMod.Verbs
 {
     public class NM_Verb_ThrowMeteor : NM_Verb_AbilityHediff
     {
-        public override void WarmupComplete()
+        public virtual void WarmupComplete()
         {
             base.WarmupComplete();
             SkyfallerMaker.SpawnSkyfaller(ThingDefOf.MeteoriteIncoming, currentTarget.Cell, CasterPawn.Map);

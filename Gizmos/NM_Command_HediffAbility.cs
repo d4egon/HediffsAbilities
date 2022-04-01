@@ -12,7 +12,13 @@ namespace NarutoMod.Gizmos
 {
     public class NM_Command_HediffAbility : Command_VerbTarget
     {
-        public NM_Verb_AbilityHediff Verb => verb as NM_Verb_AbilityHediff;
+        public NM_Verb_AbilityHediff Verb
+        {
+            get
+            {
+                return verb as NM_Verb_AbilityHediff;
+            }
+        }
 
         public virtual string GetTopRightLabel()
         {
