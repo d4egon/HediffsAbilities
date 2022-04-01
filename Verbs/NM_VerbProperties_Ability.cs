@@ -20,7 +20,7 @@ namespace NarutoMod.Verbs
         public float damageAmount;
         public float severity;
         public FloatRange conditionDaysRange;
-        public GameConditionDef gameConditionDef;
+        //public GameConditionDef gameConditionDef;
         public List<IntVec2> pattern;
         public bool ignoreRange;
     }
