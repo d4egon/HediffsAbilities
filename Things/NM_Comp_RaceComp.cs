@@ -105,8 +105,7 @@ namespace NarutoMod.Things
                 yield return compRaceComp.CreateVerbTargetCommand(allVerb);
         }
 
-        private NM_Command_HediffAbility CreateVerbTargetCommand(
-          NM_Verb_AbilityHediff verb)
+        private NM_Command_HediffAbility CreateVerbTargetCommand(NM_Verb_AbilityHediff verb)
         {
             NM_Command_HediffAbility commandHediffAbility = new NM_Command_HediffAbility
             {
