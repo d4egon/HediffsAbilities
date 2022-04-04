@@ -23,7 +23,7 @@ namespace NarutoMod.Verbs
 
         public virtual bool IsReady() => (double)Comp.Power >= Props.powerCost;
 
-        public override bool Available() => IsReady() && Available();
+        public override bool Available() => IsReady() && base.Available();
 
         public override void ExposeData()
         {
@@ -33,7 +33,7 @@ namespace NarutoMod.Verbs
 
         public override void WarmupComplete()
         {
-            WarmupComplete();
+            base.WarmupComplete();
             Comp.Notify_PowerGain(Props.powerCost);
         }
 

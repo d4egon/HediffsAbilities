@@ -11,7 +11,7 @@ namespace NarutoMod.Verbs
 {
     public class NM_Verb_Amaterasu : NM_Verb_AbilityHediff
     {
-        public virtual bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
+        public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
             if (target == null || target.Pawn == null)
                 return false;

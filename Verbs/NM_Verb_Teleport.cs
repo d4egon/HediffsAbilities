@@ -12,7 +12,7 @@ namespace NarutoMod.Verbs
 {
     public class NM_Verb_Teleport : NM_Verb_AbilityHediff
     {
-        protected virtual float EffectiveRange => !Props.ignoreRange ? EffectiveRange : 999f;
+        protected override float EffectiveRange => !Props.ignoreRange ? EffectiveRange : 999f;
 
         public override void WarmupComplete()
         {
@@ -33,14 +33,14 @@ namespace NarutoMod.Verbs
             CasterPawn.Notify_Teleported(true, true);
         }
 
-        public virtual void DrawHighlight(LocalTargetInfo target)
+        public override void DrawHighlight(LocalTargetInfo target)
         {
             if (Props.ignoreRange)
                 return;
             base.DrawHighlight(target);
         }
 
-        public virtual bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
+        public override bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
         {
             if (targ.Thing != null && targ.Thing == caster)
                 return targetParams.canTargetSelf;

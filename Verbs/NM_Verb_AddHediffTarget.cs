@@ -11,9 +11,9 @@ namespace NarutoMod.Verbs
 
     public class NM_Verb_AddHediffTarget : NM_Verb_AbilityHediff
     {
-        public virtual bool ValidateTarget(LocalTargetInfo target, bool showMessages = true) => target != null && target.Pawn != null && base.ValidateTarget(target, showMessages);
+        public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true) => target != null && target.Pawn != null && base.ValidateTarget(target, showMessages);
 
-        public virtual void WarmupComplete()
+        public override void WarmupComplete()
         {
             if (currentTarget.Pawn == null)
             return;
