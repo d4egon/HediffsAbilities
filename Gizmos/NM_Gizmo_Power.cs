@@ -37,13 +37,13 @@ namespace NarutoMod.Gizmos
             Widgets.Label(rect3, Translator.Translate("NarutoMod.GUI.Power"));
             Rect rect4 = rect2;
             rect4.yMin = rect2.y + rect2.height / 2f;
-            float num1 = this.comp.Power / this.comp.MaxPower;
-            Widgets.FillableBar(rect4, num1, NM_Gizmo_Power.FullShieldBarTex, NM_Gizmo_Power.EmptyShieldBarTex, false);
+            float num1 = comp.Power / comp.MaxPower;
+            Widgets.FillableBar(rect4, num1, FullShieldBarTex, EmptyShieldBarTex, false);
             Text.Font = (GameFont)1;
             Rect rect5 = rect4;
-            float num2 = this.comp.Power;
+            float num2 = comp.Power;
             string str1 = num2.ToString("F0");
-            num2 = this.comp.MaxPower;
+            num2 = comp.MaxPower;
             string str2 = num2.ToString("F0");
             string str3 = str1 + " / " + str2;
             Widgets.Label(rect5, str3);
