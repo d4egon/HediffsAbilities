@@ -18,6 +18,7 @@ namespace NarutoMod
         //public static ThingDef DivineEater;
         public static ThingDef ThingDef_RaisedWood;
         public static ThingDef EyeCraftingSpot;
+        public static ThingDef NM_BlackFire;
 
 
     }

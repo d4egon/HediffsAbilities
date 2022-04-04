@@ -25,7 +25,7 @@ namespace NarutoMod.Verbs
         {
             if (currentTarget.Pawn == null)
                 return;
-            FireUtility.TryAttachFire(currentTarget.Pawn, 1f);
+            NM_BlackFireUtility.TryAttachFire(currentTarget.Pawn, 1f);
             base.WarmupComplete();
             CasterPawn.stances.stunner.StunFor(60, CasterPawn, false, false);
         }

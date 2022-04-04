@@ -120,7 +120,7 @@ namespace NarutoMod.Things
             {
                 verbTargetCommand.Disable(null);
             }
-            else if (FireUtility.IsBurning(verb.CasterPawn))
+            else if (NM_BlackFireUtility.IsBurning(verb.CasterPawn))
                 verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("NarutoMod.GUI.CasterIsBurning", verb.CasterPawn.LabelShort));
             else if (verb.CasterPawn.Downed)
                 verbTargetCommand.Disable(TranslatorFormattedStringExtensions.Translate("NarutoMod.GUI.CasterIsDowned", verb.CasterPawn.LabelShort));
