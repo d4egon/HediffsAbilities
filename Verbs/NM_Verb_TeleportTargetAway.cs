@@ -19,9 +19,10 @@ namespace NarutoMod.Verbs
                 currentTarget.Pawn.Position = GenCollection.RandomElement(list);
                 currentTarget.Pawn.stances.stunner.StunFor (120, CasterPawn, false, false);
                 currentTarget.Pawn.Notify_Teleported(true, true);
+                return;
             }
             else
-                Messages.Message(Translator.Translate("NarutoMod.Messages.CellsNullOrEmpty"), MessageTypeDefOf.NeutralEvent, true);
+            Messages.Message(Translator.Translate("NarutoMod.Messages.CellsNullOrEmpty"), MessageTypeDefOf.NeutralEvent, true);
         }
     }
 }

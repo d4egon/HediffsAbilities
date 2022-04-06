@@ -1,16 +1,11 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: NarutoMod.Verbs.Verb_Wallrise
-// Assembly: NarutoMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: A24FD7BF-E4B7-40C4-8848-97E48E1CC6B6
-// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SovereignNarutoMod\Assemblies\NarutoMod.dll
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Verse;
+using RimWorld;
 
 namespace NarutoMod.Verbs
 {
-    public class NM_Verb_Wallrise : NM_Verb_AbilityHediff
+    public class NM_Verb_WoodRelease_Wall : NM_Verb_AbilityHediff
     {
         public override void WarmupComplete()
         {
@@ -39,6 +34,7 @@ namespace NarutoMod.Verbs
                 else
                     GenPlace.TryPlaceThing(thing, thing.Position, map, (ThingPlaceMode)1, null, null, new Rot4());
             }
+            AddEffecterToMaintain(EffecterDefOf.DryadEmergeFromCocoon.Spawn(currentTarget.Pawn.Position, CasterPawn.Map, 1f), currentTarget.Cell, 120, currentTarget.Pawn);
         }
         private IEnumerable<IntVec3> AffectedCells(LocalTargetInfo target, Map map)
         {

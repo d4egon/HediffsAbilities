@@ -17,7 +17,7 @@ namespace NarutoMod.GUI
         private Vector2 scrollPosition = Vector2.zero;
         private Pawn pawn;
 
-        public virtual Vector2 InitialSize => new Vector2(600f, 400f);
+        public override Vector2 InitialSize => new Vector2(600f, 400f);
 
         private List<Map> Maps => ((IEnumerable<Map>)Find.Maps).Where(x => x != pawn.Map).ToList();
 

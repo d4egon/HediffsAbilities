@@ -14,7 +14,7 @@ namespace NarutoMod.Hediffs
     {
         public NM_HediffCompProperties_AddSkills Props => props as NM_HediffCompProperties_AddSkills;
 
-        public virtual void CompPostPostAdd(DamageInfo? dinfo)
+        public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             base.CompPostPostAdd(dinfo);
             SkillRecord skillRecord = parent.pawn.skills.skills.Find(x => x.def == Props.skillDef);
@@ -23,7 +23,7 @@ namespace NarutoMod.Hediffs
             skillRecord.Level = Mathf.Clamp(skillRecord.Level + Props.levels, 0, 20);
         }
 
-        public virtual void CompPostPostRemoved()
+        public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
             SkillRecord skillRecord = parent.pawn.skills.skills.Find(x => x.def == Props.skillDef);

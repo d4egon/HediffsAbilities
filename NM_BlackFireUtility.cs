@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using NarutoMod.DefOfs;
 
 namespace NarutoMod
 {
-	public static class NM_BlackFireUtility
+    public static class NM_BlackFireUtility
 	{
 		private static readonly SimpleCurve ChanceToCatchFirePerSecondForPawnFromFlammability = new SimpleCurve
 		{
@@ -39,7 +40,7 @@ namespace NarutoMod
 			for (int i = 0; i < thingList.Count; i++)
 			{
 				Thing thing = thingList[i];
-				if (thing is Fire)
+				if (thing is NM_BlackFire)
 				{
 					return 0f;
 				}
@@ -73,7 +74,7 @@ namespace NarutoMod
 			{
 				return false;
 			}
-			Fire expr_20 = (Fire)ThingMaker.MakeThing(NM_ThingDefOf.NM_BlackFire, null);
+			NM_BlackFire expr_20 = (NM_BlackFire)ThingMaker.MakeThing(NM_ThingDefOf.NM_BlackFire, null);
 			expr_20.fireSize = fireSize;
 			GenSpawn.Spawn(expr_20, c, map, Rot4.North, WipeMode.Vanish, false);
 			return true;
@@ -108,7 +109,7 @@ namespace NarutoMod
 			{
 				return;
 			}
-			Fire expr_27 = (Fire)ThingMaker.MakeThing(NM_ThingDefOf.NM_BlackFire, null);
+			NM_BlackFire expr_27 = (NM_BlackFire)ThingMaker.MakeThing(NM_ThingDefOf.NM_BlackFire, null);
 			expr_27.fireSize = fireSize;
 			expr_27.AttachTo(t);
 			GenSpawn.Spawn(expr_27, t.Position, t.Map, Rot4.North, WipeMode.Vanish, false);
@@ -161,7 +162,7 @@ namespace NarutoMod
 			List<Thing> list = map.thingGrid.ThingsListAt(c);
 			for (int i = 0; i < list.Count; i++)
 			{
-				Fire fire = list[i] as Fire;
+				NM_BlackFire fire = list[i] as NM_BlackFire;
 				if (fire != null && fire.parent == null)
 				{
 					return true;

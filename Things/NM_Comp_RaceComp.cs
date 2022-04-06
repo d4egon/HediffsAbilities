@@ -133,7 +133,7 @@ namespace NarutoMod.Things
         {
             comp = this
         };
-        public virtual void CompTick()
+        public override void CompTick()
         {
             base.CompTick();
             if (Tick % 60 != 0 || AllVerbs == null || AllVerbs.Count == 0)
@@ -145,7 +145,7 @@ namespace NarutoMod.Things
 
         public void Notify_PowerGain(float gain) => power = Mathf.Clamp(power + gain, 0.0f, MaxPower);
 
-        public virtual void PostExposeData()
+        public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref power, "power", 0.0f, false);

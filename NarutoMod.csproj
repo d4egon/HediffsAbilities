@@ -56,9 +56,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NM_BlackSpark.cs" />
+    <Compile Include="NM_BlackFire.cs" />
     <Compile Include="NM_BlackFireUtility.cs" />
-    <Compile Include="DefOfs\NM_AbilityDefOf.cs" />
-    <Compile Include="DefOfs\NM_StatDefOf.cs" />
+    <Compile Include="DefOfs\NM_FleckDefOf.cs" />
     <Compile Include="DefOfs\NM_HediffDefOf.cs" />
     <Compile Include="DefOfs\NM_ThingDefOf.cs" />
     <Compile Include="Verbs\NM_VerbProperties_Ability.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Verbs\NM_Verb_AddHediffTarget.cs" />
     <Compile Include="Verbs\NM_Verb_AddHediffSelf.cs" />
     <Compile Include="Verbs\NM_Verb_MapTeleport.cs" />
-    <Compile Include="Verbs\NM_Verb_Wallrise.cs" />
+    <Compile Include="Verbs\NM_Verb_WoodRelease_Wall.cs" />
     <Compile Include="Verbs\NM_Verb_TeleportTargetAway.cs" />
     <Compile Include="Verbs\NM_Verb_TeleportToCaster.cs" />
     <Compile Include="Verbs\NM_Verb_ThrowMeteor.cs" />

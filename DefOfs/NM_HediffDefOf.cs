@@ -12,8 +12,6 @@ namespace NarutoMod
     [DefOf]
     public static class NM_HediffDefOf
     {
-        //public static HediffDef HediffDef_Illusion;
-        //public static HediffDef HediffDef_Fruit;
         public static HediffDef Prostheses_HediffDef_EyeVIII;
     }
 }

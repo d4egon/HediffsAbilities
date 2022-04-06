@@ -17,15 +17,13 @@ namespace NarutoMod.Verbs
                 return false;
             if (target.Pawn.FlammableNow)
                 return base.ValidateTarget(target, showMessages);
-            Messages.Message(Translator.Translate("NarutoMod.Messages.TargetUnflammable"), MessageTypeDefOf.RejectInput, false);
+            Messages.Message(Translator.Translate("NarutoMod.Messages.TargetInflammable"), MessageTypeDefOf.RejectInput, false);
             return false;
         }
 
         public override void WarmupComplete()
         {
-            if (currentTarget.Pawn == null)
-                return;
-            NM_BlackFireUtility.TryAttachFire(currentTarget.Pawn, 1f);
+            NM_BlackFireUtility.TryAttachFire(base.currentTarget.Pawn, 1f);
             base.WarmupComplete();
             CasterPawn.stances.stunner.StunFor(60, CasterPawn, false, false);
         }
