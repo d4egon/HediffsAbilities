@@ -7,7 +7,6 @@
 using NarutoMod.Gizmos;
 using NarutoMod.Hediffs;
 using NarutoMod.Verbs;
-using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;

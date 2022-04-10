@@ -11,5 +11,6 @@ namespace NarutoMod
         public static ThingDef EyeCraftingSpot;
         public static ThingDef NM_BlackFire;
         public static ThingDef NM_BlackSpark;
+        public static ThingDef NM_MeditationSpot;
     }
 }
