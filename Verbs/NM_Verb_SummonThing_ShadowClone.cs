@@ -8,10 +8,10 @@ using NarutoMod.DefOfs;
 
 namespace NarutoMod.Verbs
 {
-    class NM_Verb_SummonThing_Dog : NM_Verb_AbilityHediff
+    class NM_Verb_SummonThing_ShadowClone : NM_Verb_AbilityHediff
 	{
 		public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true) => target != null && target.Pawn != null && base.ValidateTarget(target, showMessages);
-		public PawnKindDef pawnKindToSpawn = DefOfs.NM_PawnKindDefOf.NM_SummonPawnKind_Dog;
+		public PawnKindDef pawnKindToSpawn = DefOfs.NM_PawnKindDefOf.NM_SummonPawnKind_ShadowClone;
 		public override void WarmupComplete()
 		{
 
