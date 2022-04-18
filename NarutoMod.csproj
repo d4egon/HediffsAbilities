@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="DefOfs\NM_PawnKindDefOf.cs" />
     <Compile Include="DefOfs\NM_SoundDefOf.cs" />
+    <Compile Include="PawnKindBiosculptingCycle.cs" />
+    <Compile Include="PawnKindBiosculptingCycle_Properties.cs" />
     <Compile Include="Verbs\NM_Verb_SummonThing_WoodClone.cs" />
     <Compile Include="Verbs\NM_Verb_SummonThing_ShadowClone.cs" />
     <Compile Include="Verbs\NM_Verb_SummonThing_Shark.cs" />

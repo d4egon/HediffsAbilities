@@ -1,10 +1,5 @@
-﻿using RimWorld;
-using Verse.AI;
-using Verse;
-using System.Collections.Generic;
-using NarutoMod.Hediffs;
-using System.Text;
-using NarutoMod.DefOfs;
+﻿using Verse;
+using RimWorld;
 
 namespace NarutoMod.Verbs
 {
@@ -16,8 +11,7 @@ namespace NarutoMod.Verbs
 		{
 
 			base.WarmupComplete();
-            base.CasterPawn.stances.stunner.StunFor(45, CasterPawn, false, false);
-			GenSpawn.Spawn(PawnGenerator.GeneratePawn(
+            GenSpawn.Spawn(PawnGenerator.GeneratePawn(
 							new PawnGenerationRequest(
 								Props.pawnKindToSpawn,
 								caster.Faction,
@@ -27,6 +21,8 @@ namespace NarutoMod.Verbs
 						caster.Position,
 						caster.Map
 					);
+			return;
 		}
 	}
+
 }

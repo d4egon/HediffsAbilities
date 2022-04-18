@@ -13,15 +13,17 @@ namespace NarutoMod.DefOfs
         public static PawnKindDef NM_SummonPawnKind_Monkey;
         public static PawnKindDef NM_SummonPawnKind_Hawk;
         public static PawnKindDef NM_SummonPawnKind_Shark;
-        //public static PawnKindDef NM_EdoTensei;
         public static PawnKindDef NM_SummonPawnKind_ShadowClone;
         public static PawnKindDef NM_SummonPawnKind_WoodClone;
+        //public static PawnKindDef NM_EdoTensei;
 
+        //Races
+        public static PawnKindDef NM_Ninshu;
         //Sage Modus
-        //public static PawnKindDef NM_SageModeSnake;
-        //public static PawnKindDef NM_SageModeToad;
-        //public static PawnKindDef NM_SageModeMonkey;
-        //public static PawnKindDef NM_SageModeShark;
+        public static PawnKindDef NM_Ninshu_Snake;
+        public static PawnKindDef NM_Ninshu_Toad;
+        public static PawnKindDef NM_Ninshu_Monkey;
+        public static PawnKindDef NM_Ninshu_Shark;
 
         //Tailed Beasts
         //public static PawnKindDef NM_Bijuu10;
