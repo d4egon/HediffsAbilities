@@ -14,7 +14,7 @@ namespace NarutoMod.Effects
             TicksforAppearence--;
             if (TicksforAppearence == 0 && Map != null)
             {
-                SmokeThrowher.ThrowSmokeTrail(Position.ToVector3Shifted(), 0.2f, Map, "NM_Mote_Watertrail");
+                SmokeThrowher.ThrowSmokeTrail(Position.ToVector3Shifted(), 0.2f, Map, "NM_Mote_WatertrailSoft");
                 TicksforAppearence = 2;
             }
         }
